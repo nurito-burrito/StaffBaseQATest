@@ -36,3 +36,7 @@ Cypress.Commands.add('getIframe', () => {
         // https://on.cypress.io/wrap
         .then(cy.wrap)
 })
+
+Cypress.Commands.add('clickButton', (buttonLabel) => {
+    cy.get('button').contains(buttonLabel).click({ force: true })
+})
